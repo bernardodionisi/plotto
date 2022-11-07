@@ -90,14 +90,14 @@ def coefficient_plot(data: DataFrame,
 def chart_html(altair_chart,
                figure_caption: str = None,
                caption_font: str = 'helvetica',
-               save_file_name: str = None):
+               save_fname: str = None):
     """takes an altair chart and returns a manually modified html with a figure caption"""
 
     if not isinstance(caption_font, str):
         caption_font = 'helvetica'
 
-    if figure_caption is None and save_file_name is not None:
-        altair_chart.save(save_file_name,
+    if figure_caption is None and save_fname is not None:
+        altair_chart.save(save_fname,
                           # embed_options={'renderer': 'svg'}
                           )
     else:
@@ -125,9 +125,9 @@ def chart_html(altair_chart,
                                                        f'\n</figcaption>'
                                                        f'\n</figure>')
 
-        if save_file_name:
+        if save_fname:
             # overwrite html
-            with open(save_file_name, 'w+') as f:
+            with open(save_fname, 'w+') as f:
                 f.write(chart_html)
         else:
             return chart_html
