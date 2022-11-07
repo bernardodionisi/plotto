@@ -11,7 +11,7 @@ classifiers = [
     "Operating System :: OS Independent",
     "Natural Language :: English",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT",
+    "License :: OSI Approved :: MIT License",
     "Topic :: Software Development :: Documentation",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Programming Language :: Python :: 3.8",
