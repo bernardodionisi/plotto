@@ -1,0 +1,6 @@
+furo
+sphinx_copybutton
+jupyter
+sphinx
+nbsphinx
+
