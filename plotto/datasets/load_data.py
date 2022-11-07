@@ -1,16 +1,15 @@
-import os.path
-from pathlib import Path
-
+from os.path import abspath, join, split
 from pandas import read_csv
 
-data_folder = Path(f"{'/'.join(os.path.realpath(__file__).split('/')[:-1])}/csv")
+
+def _get_path(f: str):
+    return split(abspath(f))[0]
+
+
+def _load_data(module: str, file_name: str):
+    return read_csv(join(_get_path(module), file_name))
 
 
 def params():
-    """output from the differences pkg"""
-
-    csv_file = data_folder / 'params.csv'
-
-    data = read_csv(csv_file)
-
-    return data
+    """output from differences"""
+    return _load_data(__file__, 'params.csv')

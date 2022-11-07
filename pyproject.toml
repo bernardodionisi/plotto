@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "plotto"
-version = "0.1.0"
+version = "0.1.1"
 description = "functions to create interactive charts with Altair"
 authors = ["Bernardo Dionisi <bernardo.dionisi@gmail.com>"]
 readme = "README.md"
